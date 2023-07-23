@@ -24,4 +24,17 @@ public class BookService
 
       return bookRepository.getBookList();
     }
+    public  Book getBookById(int bookId){
+        return bookRepository.getBookById(bookId);
+    }
+
+    public String deleteBookByBookId(int bookId){
+        return bookRepository.deleteBookById(bookId);
+    }
+
+    public  String updataBook(Integer bookId,Book book)
+    {
+        String ans=bookRepository.updateBook(bookId,book);
+        return ans;
+    }
 }
